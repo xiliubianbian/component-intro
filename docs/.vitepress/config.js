@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "组件库文档",
+  title: "智校前端组件库文档",
   base: '/component-intro/',
   description: "公共组件库使用文档",
   themeConfig: {
@@ -66,7 +66,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: 'Copyright © 2024 组件库团队'
+      copyright: 'Copyright © 2025 智校前端团队'
     },
 
     // 搜索配置

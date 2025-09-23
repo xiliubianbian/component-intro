@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "组件库文档"
+  name: "智校前端"
   text: "高质量的公共组件库"
   tagline: 简单易用、功能强大的组件集合
   image:
-    src: /logo.svg
+    src: /cover.png
     alt: 组件库
   actions:
     - theme: brand
