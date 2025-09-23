@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/component-intro/',
   description: "公共组件库使用文档",
   head: [
-    ['link', { rel: 'icon', href: '/component-intro/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
