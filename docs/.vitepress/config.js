@@ -61,7 +61,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/component-intro' }
+      { icon: 'github', link: 'https://github.com/xiliubianbian/component-intro/tree/main' }
     ],
 
     footer: {
