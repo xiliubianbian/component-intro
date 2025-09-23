@@ -215,6 +215,15 @@ export default {
 
 </details>
 
+### 预览（CDN 实例）
+
+<Preview
+  title="Dialog 预览"
+  :height="240"
+  html="<div style='padding:12px'><button onclick='app.alert(&quot;这是一个提示&quot;)'>Alert</button> <button onclick='app.confirm(&quot;确定执行吗？&quot;).then(r=>app.toast(&quot;info&quot;,&quot;结果:&quot;+r))'>Confirm</button></div>"
+  js="new Vue({ el:'#app' })"
+/>
+
 ## API
 
 ### Alert 方法

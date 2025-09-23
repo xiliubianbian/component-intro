@@ -102,6 +102,15 @@ Vue.use(Calendar, { router, root: app })
 Vue.use(QuickDate, { router, root: app })
 ```
 
+### 预览（CDN 实例）
+
+<Preview
+  title="DateBar 预览（仅示意，需要在工程内提供 <date-bar> 组件注册）"
+  :height="240"
+  html="<div style='padding:12px'>此处展示依赖工程注册的 &lt;date-bar&gt;，可在实际项目中直接使用。</div>"
+  js="new Vue({ el:'#app' })"
+/>
+
 ## API
 
 ### Props
