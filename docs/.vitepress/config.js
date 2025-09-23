@@ -5,6 +5,9 @@ export default defineConfig({
   title: "智校前端组件库文档",
   base: '/component-intro/',
   description: "公共组件库使用文档",
+  head: [
+    ['link', { rel: 'icon', href: '/component-intro/favicon.ico' }]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -76,7 +79,7 @@ export default defineConfig({
 
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/your-username/component-intro/edit/main/docs/:path',
+      pattern: 'https://github.com/xiliubianbian/component-intro/',
       text: '在 GitHub 上编辑此页面'
     },
 
