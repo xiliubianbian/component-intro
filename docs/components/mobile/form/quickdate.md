@@ -13,6 +13,16 @@
 
 ## 代码演示
 
+### 预览（CDN 实例）
+
+<Preview
+  title="QuickDate 预览"
+  :width="375"
+  :height="600"
+  html="<div style='padding:12px'><button onclick='showQuickDate()'>快捷日期选择</button> <button onclick='showCustomQuickDate()'>自定义快捷项</button><div id='result' style='margin-top:10px;padding:8px;background:#f0f0f0;border-radius:4px;'>选择的日期范围将显示在这里</div></div>"
+  js="window.showQuickDate=function(){app.quickDate({type:1,index:-1,shortcuts:['今天','昨天','本周','最近7天','最近30天','本月','上月']}).then(result=>{document.getElementById('result').innerHTML='开始日期: '+result.sdate+'<br>结束日期: '+result.edate+'<br>选择索引: '+result.index;var shortcuts=['今天','昨天','本周','最近7天','最近30天','本月','上月'];var shortcutName=shortcuts[parseInt(result.index)]||'未知';app.toast('success','已选择: '+shortcutName)})};window.showCustomQuickDate=function(){app.quickDate({type:2,index:-1,shortcuts:['今天','近15天','近30天','近90天']}).then(result=>{document.getElementById('result').innerHTML='开始日期: '+result.sdate+'<br>结束日期: '+result.edate+'<br>选择索引: '+result.index+' (企业微信样式)';var shortcuts=['今天','近15天','近30天','近90天'];var shortcutName=shortcuts[parseInt(result.index)]||'未知';app.toast('success','已选择: '+shortcutName)})};new Vue({el:'#app'});"
+/>
+
 ### 基础用法（全局调用）
 
 ```javascript

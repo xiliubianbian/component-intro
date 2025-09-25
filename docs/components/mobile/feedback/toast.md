@@ -67,7 +67,7 @@ export default {
 <Preview
   title="Toast 预览"
   :height="180"
-  html="<div style='padding:12px'><button onclick='app.toast(&quot;success&quot;,&quot;操作成功&quot;)'>成功</button> <button onclick='app.toast(&quot;error&quot;,&quot;失败&quot;)'>失败</button> <button onclick='app.toast(&quot;info&quot;,&quot;提示&quot;)'>信息</button></div>"
+  html="<div style='padding:12px'><button onclick='app.toast(&quot;default&quot;,&quot;默认提示&quot;)'>默认</button> <button onclick='app.toast(&quot;success&quot;,&quot;操作成功&quot;)'>成功</button> <button onclick='app.toast(&quot;error&quot;,&quot;操作失败&quot;)'>失败</button> <button onclick='app.toast(&quot;info&quot;,&quot;信息提示&quot;)'>信息</button></div>"
   js="new Vue({ el:'#app', mounted(){ /* 可做初始化 */ } })"
 />
 

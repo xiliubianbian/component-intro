@@ -13,6 +13,16 @@
 
 ## 代码演示
 
+### 预览（CDN 实例）
+
+<Preview
+  title="Calendar 预览"
+  :width="375"
+  :height="600"
+  html="<div style='padding:12px'><button onclick='showCalendar()'>选择日期</button> <button onclick='showCalendarWithOptions()'>选择日期（禁用未来）</button><div id='result' style='margin-top:10px;padding:8px;background:#f0f0f0;border-radius:4px;'>选择的日期将显示在这里</div></div>"
+  js="window.showCalendar=function(){app.calendar({value:'2025-09-01'}).then(date=>{document.getElementById('result').innerHTML='选择的日期: '+date;app.toast('success','已选择: '+date)})};window.showCalendarWithOptions=function(){app.calendar({value:'2025-08-01',disableFuture:true}).then(date=>{document.getElementById('result').innerHTML='选择的日期: '+date+' (禁用未来)';app.toast('success','已选择: '+date)})};new Vue({el:'#app'});"
+/>
+
 ### 基础用法（全局调用）
 
 ```javascript

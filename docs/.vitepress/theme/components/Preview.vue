@@ -1,5 +1,5 @@
 <template>
-  <div class="vp-preview">
+  <div class="vp-preview" :style="{ width: typeof width === 'number' ? width + 'px' : width }">
     <div class="vp-preview__header" v-if="title">
       <span class="vp-preview__title">{{ title }}</span>
     </div>
@@ -19,6 +19,7 @@ import { onMounted, ref, watch } from 'vue'
 interface Props {
   title?: string
   height?: number
+  width?: number | string
   html?: string
   css?: string
   js?: string
@@ -30,6 +31,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   title: '',
   height: 420,
+  width: '100%',
   html: '',
   css: '',
   js: '',

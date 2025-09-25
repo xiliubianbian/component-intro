@@ -105,10 +105,11 @@ Vue.use(QuickDate, { router, root: app })
 ### 预览（CDN 实例）
 
 <Preview
-  title="DateBar 预览（仅示意，需要在工程内提供 <date-bar> 组件注册）"
-  :height="240"
-  html="<div style='padding:12px'>此处展示依赖工程注册的 &lt;date-bar&gt;，可在实际项目中直接使用。</div>"
-  js="new Vue({ el:'#app' })"
+  :width="375"
+  :height="600"
+  title="DateBar 预览"
+  html="<div style='padding:20px;background:#f5f5f5;min-height:100vh;'><div style='background:#fff;border-radius:8px;padding:16px;margin-bottom:16px;'><h3 style='margin:0 0 16px 0;color:#333;font-size:16px;'>日期选择条</h3><date-bar ref='dateBar' :sdate='sdate' :edate='edate' :index='quickDateIndex'></date-bar></div><div style='background:#fff;border-radius:8px;padding:16px;'><h4 style='margin:0 0 12px 0;color:#333;font-size:14px;'>选择结果：</h4><div id='result' style='padding:12px;background:#f8f9fa;border-radius:4px;font-size:14px;color:#666;'>请选择日期范围</div></div></div>"
+  js="window.vueApp=new Vue({el:'#app',data(){return{sdate:'',edate:'',quickDateIndex:-1}},methods:{onChangeDate(val){console.log('日期变化:',val);this.sdate=val.sdate;this.edate=val.edate;this.quickDateIndex=val.index;this.$nextTick(()=>{this.updateResult()});app.toast('success','日期已更新: '+val.sdate+' 至 '+val.edate)},updateResult(){var r=document.getElementById('result');if(!r)return;var sd=this.sdate||'未选择';var ed=this.edate||'未选择';var idx=this.quickDateIndex>=0?('快捷选择: '+['今天','昨天','本周','最近7天','最近30天','本月','上月'][this.quickDateIndex]):'手动选择';r.innerHTML='开始日期: <strong>'+sd+'</strong><br>结束日期: <strong>'+ed+'</strong><br>选择方式: '+idx;console.log('更新结果显示:',{sdate:sd,edate:ed,index:this.quickDateIndex})}},mounted(){this.updateResult();console.log('Vue实例已挂载');var self=this;this.$nextTick(()=>{if(this.$refs.dateBar){this.$refs.dateBar.$on('changeDate',this.onChangeDate);console.log('手动绑定changeDate事件成功')}else{console.error('dateBar组件未找到')}})}});"
 />
 
 ## API
