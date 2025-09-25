@@ -8,9 +8,11 @@
 
 | 组件 | 描述 | 文档链接 |
 |------|------|----------|
-| ActionSheet | 动作面板，从底部弹起的模态框 | [查看文档](./mobile/feedback/action-sheet.md) |
 | Toast | 轻量级消息提示 | [查看文档](./mobile/feedback/toast.md) |
 | Dialog | 模态对话框 | [查看文档](./mobile/feedback/dialog.md) |
+| ActionSheet | 动作面板，从底部弹起的模态框 | [查看文档](./mobile/feedback/action-sheet.md) |
+| Loading | 全局加载指示组件 | [查看文档](./mobile/feedback/loading.md) |
+
 
 ## 组件设计原则
 
